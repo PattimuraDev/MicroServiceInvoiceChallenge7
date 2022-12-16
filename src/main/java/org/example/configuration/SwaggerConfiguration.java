@@ -10,10 +10,21 @@ import org.springframework.context.annotation.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * kelas untuk representasi konfigurasi swagger ui
+ * @author Dwi Satria Patra
+ */
 @Configuration
 public class SwaggerConfiguration {
+
+    /**
+     * Method untuk mengatur konfigurasi swagger dengan OpenAPI versi 3
+     * @param appDescription Deskripsi dari dokumentasi swagger
+     * @param appVersion Keterangan versi dari dokumentasi dengan swagger
+     * @return OpenAPI yang mengatur detail dari dokumentasi swagger
+     */
     @Bean
-    public OpenAPI demoApi(@Value("REST API for challenge chapter 6 back end java binar academy") String appDescription,
+    public OpenAPI demoApi(@Value("REST API invoice microservice for challenge chapter 7 backend java Binar Academy") String appDescription,
                            @Value("v1.0.0") String appVersion
     ) {
         Server server = new Server();
@@ -23,7 +34,7 @@ public class SwaggerConfiguration {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("Patra API")
+                        .title("Invoice Microservice Endpoints")
                         .version(appVersion)
                         .description(appDescription)
                         .termsOfService("http://swagger.io/terms")

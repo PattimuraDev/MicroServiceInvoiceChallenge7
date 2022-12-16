@@ -26,6 +26,10 @@ import org.example.model.Seat;
 import org.example.model.Film;
 import org.example.model.Schedule;
 
+/**
+ * Kelas controller untuk menghandle endpoint terkait invoice
+ * @author Dwi Satria Patra
+ */
 @Tag(name = "INVOICE")
 @RestController
 @RequestMapping("/invoice")
